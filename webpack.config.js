@@ -7,12 +7,15 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     .addEntry('js/app', [
         './node_modules/jquery/dist/jquery.slim.js',
-        './node_modules/popper.js/dist/popper,min.js',
+        './node_modules/popper.js/dist/popper.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
         './node_modules/holderjs/holder.min.js'
 
     ])
 
-    .addStyleEntry('css/app', './node_modules/bootstrap/dist/css/bootstrap.min.css');
+    .addStyleEntry('css/app', [
+        './node_modules/bootstrap/dist/css/bootstrap.css',
+        './assets/css/app.css'
+    ]);
 
 module.exports = Encore.getWebpackConfig();
